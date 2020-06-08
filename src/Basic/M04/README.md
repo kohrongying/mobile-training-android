@@ -8,7 +8,7 @@ When we start a new project, most of time we will create Iteration 0 to setup th
 #### Scope
 
 * Project init
-* Add 3rd Library
+* Add 3rd party Libraries
 
 #### Acceptance Criteria
 
@@ -26,22 +26,27 @@ Use empty activity phone and tablet template create the project:
 * Language: Kotlin
 * Minimum API level: API 19: Android 4.4(KitKat)
 
-After empty project created, you can use git init a repo, and add your first commit.
+After creating the empty project, run `git init` in the terminal, and add your first commit.
+
 
 ### Add Libraries
 
 #### Gradle
 
-Android application use gradle as the build tool.
-[Configure your build](https://developer.android.com/studio/build)
-[Gradle tips and recipes](https://developer.android.com/studio/build/gradle-tips)
+Android application use gradle as the build tool. Read more about [configuring your build](https://developer.android.com/studio/build) and some [gradle tips and recipes](https://developer.android.com/studio/build/gradle-tips)
 
-#### Architecture Guide
+#### Adding dependencies
+You also need add 3rd party libraries, you should add dependencies into `build.gradle` file.
+
+* [Retrofit](https://square.github.io/retrofit/)
+* [Dagger](https://dagger.dev/android) is optional to use
+
+
+### Architecture Guide
 
 Android provide the official best practice architecture guide.
 
-[Architecture Guide](https://developer.android.com/jetpack/docs/guide)
-Your can refer this guide to set up your project gradle build and write your first activity.
+You can refer using the [Android architecture guide](https://developer.android.com/jetpack/docs/guide) to set up your project gradle build and write your first activity.
 
 In this demo, we will not try to use the Jetpack, all topics below are optional to read:
 * [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)
@@ -50,11 +55,12 @@ In this demo, we will not try to use the Jetpack, all topics below are optional 
 * [Room](https://developer.android.com/topic/libraries/architecture/room)
 * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
 
-You also need add 3rd libraries, you should add dependencies into `build.gradle` file.
 
-* Add dependencies in `build.gradle`
-  * [Retrofit](https://square.github.io/retrofit/)
-  * [Dagger](https://dagger.dev/android) is optional to use
+### Running the mock server
+* In this repo, navigate to the `mock` folder.
+* `npm install` to install json-server
+* `npm run start` to start a json server on `localhost:3000`
+
 
 #### Use TDD write your first API Service (Optional, if you already familiar with Kotlin TDD skill then you can setup it)
 
